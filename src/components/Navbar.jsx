@@ -14,7 +14,7 @@ const Navbar = () => {
     <NavLink to='/community'><div className="md:block hidden">Community</div></NavLink>
     </div>
     <div className="md:hidden flex items-center justify-between">
-      <div><span className='text-red-400'>Crypto</span><span className='text-blue-200'>Diction</span></div>
+      <NavLink to="/"><div><span className='text-red-400'>Crypto</span><span className='text-blue-200'>Diction</span></div></NavLink>
       {toggle ? <div className="border border-white p-2 rounded" onClick={()=>{setToggle(!toggle)}}><AiOutlineClose/></div> : <div className="border border-white p-2 rounded" onClick={()=>{setToggle(!toggle)}}><AiOutlineMenu/></div>}
     </div>
 
