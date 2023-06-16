@@ -18,7 +18,7 @@ const Navbar = () => {
       {toggle ? <div className="border border-white p-2 rounded" onClick={()=>{setToggle(!toggle)}}><AiOutlineClose/></div> : <div className="border border-white p-2 rounded" onClick={()=>{setToggle(!toggle)}}><AiOutlineMenu/></div>}
     </div>
 
-    <div className='bg-white border border-black text-black my-2 p-5 transition-shadow duration-500 ' style={toggle ? {} : {position:"absolute",top:"-100px", left:"-500px",animationDuration:"500ms"}}>
+    <div className={`relative md:hidden bg-white border border-black text-black my-2 p-5 duration-500 ${toggle ? "left-0" : "left-[-500px] "}`}>
     <NavLink to="/charts"><div >Charts</div></NavLink>
     <NavLink to='/predict'><div >Prediction</div></NavLink>
     <NavLink to='/community'><div >Community</div></NavLink>
