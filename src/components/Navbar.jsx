@@ -14,14 +14,14 @@ const Navbar = () => {
     <NavLink to='/community'><div className="md:block hidden">Community</div></NavLink>
     </div>
     <div className="md:hidden flex items-center justify-between">
-      <div>Brand</div>
+      <div><span className='text-red-400'>Crypto</span><span className='text-blue-200'>Diction</span></div>
       {toggle ? <div className="border border-white p-2 rounded" onClick={()=>{setToggle(!toggle)}}><AiOutlineClose/></div> : <div className="border border-white p-2 rounded" onClick={()=>{setToggle(!toggle)}}><AiOutlineMenu/></div>}
     </div>
 
     <div className='bg-white border border-black text-black my-2 p-5 transition-shadow duration-500 ' style={toggle ? {} : {position:"absolute",top:"-100px", left:"-500px",animationDuration:"500ms"}}>
-      <div>Charts</div>
-      <div>Predictions</div>
-      <div>Community</div>
+    <NavLink to="/charts"><div >Charts</div></NavLink>
+    <NavLink to='/predict'><div >Prediction</div></NavLink>
+    <NavLink to='/community'><div >Community</div></NavLink>
     </div>
   </nav>
   )
